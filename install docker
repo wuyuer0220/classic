@@ -1,0 +1,15 @@
+脚本安装
+1.使用root权限登陆系统。
+2.更新系统包到最新。
+# yum -y update
+
+3.执行Docker安装脚本
+# curl -sSL https://get.docker.com/ | sh
+# yum install -y docker-selinux
+
+这个脚本会添加docker.repo 配置并安装Docker。
+4.启动Docker
+# systemctl start docker.service
+
+5.验证docker已经正常安装
+# docker run hello-world
